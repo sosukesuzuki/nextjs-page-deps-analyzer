@@ -1,0 +1,188 @@
+[
+  {
+    "name": "404.tsx",
+    "graph": {
+      "module": {
+        "filePath": "pages/404.tsx",
+        "dependencies": [
+          {
+            "filePath": "components/Layout.tsx",
+            "dependencies": [
+              {
+                "filePath": "components/Header.tsx",
+                "dependencies": []
+              },
+              {
+                "filePath": "components/Footer.tsx",
+                "dependencies": []
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "_app.tsx",
+    "graph": {
+      "module": {
+        "filePath": "pages/_app.tsx",
+        "dependencies": []
+      }
+    }
+  },
+  {
+    "name": "_document.tsx",
+    "graph": {
+      "module": {
+        "filePath": "pages/_document.tsx",
+        "dependencies": []
+      }
+    }
+  },
+  {
+    "name": "index.tsx",
+    "graph": {
+      "module": {
+        "filePath": "pages/index.tsx",
+        "dependencies": [
+          {
+            "filePath": "components/PageLayout.tsx",
+            "dependencies": []
+          },
+          {
+            "filePath": "components/SpeakerDeck.tsx",
+            "dependencies": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "members/[name].tsx",
+    "graph": {
+      "module": {
+        "filePath": "pages/members/[name].tsx",
+        "dependencies": [
+          {
+            "filePath": "utils/members.ts",
+            "dependencies": []
+          },
+          {
+            "filePath": "components/Posts.tsx",
+            "dependencies": []
+          },
+          {
+            "filePath": "components/MemberIcon.tsx",
+            "dependencies": [
+              {
+                "filePath": "utils/members.ts",
+                "dependencies": []
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "members/index.tsx",
+    "graph": {
+      "module": {
+        "filePath": "pages/members/index.tsx",
+        "dependencies": [
+          {
+            "filePath": "components/MemberIcon.tsx",
+            "dependencies": [
+              {
+                "filePath": "utils/members.ts",
+                "dependencies": []
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "posts/[slug].tsx",
+    "graph": {
+      "module": {
+        "filePath": "pages/posts/[slug].tsx",
+        "dependencies": [
+          {
+            "filePath": "components/Tags.tsx",
+            "dependencies": []
+          },
+          {
+            "filePath": "components/PostContent.tsx",
+            "dependencies": []
+          },
+          {
+            "filePath": "components/TweetButton.tsx",
+            "dependencies": []
+          },
+          {
+            "filePath": "components/PostContact.tsx",
+            "dependencies": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "posts/index.tsx",
+    "graph": {
+      "module": {
+        "filePath": "pages/posts/index.tsx",
+        "dependencies": []
+      }
+    }
+  },
+  {
+    "name": "tags/[tag].tsx",
+    "graph": {
+      "module": {
+        "filePath": "pages/tags/[tag].tsx",
+        "dependencies": [
+          {
+            "filePath": "components/Posts.tsx",
+            "dependencies": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "tags/index.tsx",
+    "graph": {
+      "module": {
+        "filePath": "pages/tags/index.tsx",
+        "dependencies": [
+          {
+            "filePath": "utils/posts.ts",
+            "dependencies": [
+              {
+                "filePath": "utils/markdown/markdownToHtml.ts",
+                "dependencies": [
+                  {
+                    "filePath": "utils/markdown/unifiedPlugins/hatenaLinkCard.ts",
+                    "dependencies": []
+                  },
+                  {
+                    "filePath": "utils/markdown/unifiedPlugins/attachSizeToImage.ts",
+                    "dependencies": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "filePath": "components/Tags.tsx",
+            "dependencies": []
+          }
+        ]
+      }
+    }
+  }
+]

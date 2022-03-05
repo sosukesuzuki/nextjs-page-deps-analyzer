@@ -1,0 +1,16 @@
+[
+  {
+    "name": "index.tsx",
+    "graph": {
+      "module": {
+        "filePath": "pages/index.tsx",
+        "dependencies": [
+          {
+            "filePath": "components/Foo.tsx",
+            "dependencies": []
+          }
+        ]
+      }
+    }
+  }
+]
