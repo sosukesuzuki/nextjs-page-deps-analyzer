@@ -1,11 +1,15 @@
 # nextjs-page-deps-analyzer
 
-Not released.
+## CLI
+
+```console
+nextjs-page-deps-analyzer ./src/pages
+```
 
 ## Usage
 
 ```js
-import { analyzePages } from "@sosukesuzuki/nextjs-page-deps-analyzer";
+import { analyzePages } from "nextjs-page-deps-analyzer";
 import path from "node:path";
 
 const pagesDirPath = path.join(process.cwd(), "src", "pages");

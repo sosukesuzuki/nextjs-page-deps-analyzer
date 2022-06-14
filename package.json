@@ -1,5 +1,5 @@
 {
-  "name": "@sosukesuzuki/nextjs-page-deps-analyzer",
+  "name": "nextjs-page-deps-analyzer",
   "version": "1.0.0",
   "description": "",
   "bin": "./bin/cli.js",
