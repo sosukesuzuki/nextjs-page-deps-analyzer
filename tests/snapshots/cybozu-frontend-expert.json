@@ -10,35 +10,44 @@
             "dependencies": [
               {
                 "filePath": "components/Header.tsx",
-                "dependencies": []
+                "dependencies": [],
+                "size": 1235
               },
               {
                 "filePath": "components/Footer.tsx",
-                "dependencies": []
+                "dependencies": [],
+                "size": 891
               }
-            ]
+            ],
+            "size": 2691
           }
-        ]
+        ],
+        "size": 174
       }
-    }
+    },
+    "size": 4991
   },
   {
     "name": "_app.tsx",
     "graph": {
       "module": {
         "filePath": "pages/_app.tsx",
-        "dependencies": []
+        "dependencies": [],
+        "size": 206
       }
-    }
+    },
+    "size": 206
   },
   {
     "name": "_document.tsx",
     "graph": {
       "module": {
         "filePath": "pages/_document.tsx",
-        "dependencies": []
+        "dependencies": [],
+        "size": 248
       }
-    }
+    },
+    "size": 248
   },
   {
     "name": "index.tsx",
@@ -48,15 +57,19 @@
         "dependencies": [
           {
             "filePath": "components/PageLayout.tsx",
-            "dependencies": []
+            "dependencies": [],
+            "size": 190
           },
           {
             "filePath": "components/SpeakerDeck.tsx",
-            "dependencies": []
+            "dependencies": [],
+            "size": 758
           }
-        ]
+        ],
+        "size": 505
       }
-    }
+    },
+    "size": 1453
   },
   {
     "name": "members/[name].tsx",
@@ -66,24 +79,30 @@
         "dependencies": [
           {
             "filePath": "utils/members.ts",
-            "dependencies": []
+            "dependencies": [],
+            "size": 1840
           },
           {
             "filePath": "components/Posts.tsx",
-            "dependencies": []
+            "dependencies": [],
+            "size": 475
           },
           {
             "filePath": "components/MemberIcon.tsx",
             "dependencies": [
               {
                 "filePath": "utils/members.ts",
-                "dependencies": []
+                "dependencies": [],
+                "size": 1840
               }
-            ]
+            ],
+            "size": 411
           }
-        ]
+        ],
+        "size": 2051
       }
-    }
+    },
+    "size": 3891
   },
   {
     "name": "members/index.tsx",
@@ -96,68 +115,23 @@
             "dependencies": [
               {
                 "filePath": "utils/members.ts",
-                "dependencies": []
+                "dependencies": [],
+                "size": 1840
               }
-            ]
+            ],
+            "size": 411
           }
-        ]
+        ],
+        "size": 1597
       }
-    }
+    },
+    "size": 2008
   },
   {
     "name": "posts/[slug].tsx",
     "graph": {
       "module": {
         "filePath": "pages/posts/[slug].tsx",
-        "dependencies": [
-          {
-            "filePath": "components/Tags.tsx",
-            "dependencies": []
-          },
-          {
-            "filePath": "components/PostContent.tsx",
-            "dependencies": []
-          },
-          {
-            "filePath": "components/TweetButton.tsx",
-            "dependencies": []
-          },
-          {
-            "filePath": "components/PostContact.tsx",
-            "dependencies": []
-          }
-        ]
-      }
-    }
-  },
-  {
-    "name": "posts/index.tsx",
-    "graph": {
-      "module": {
-        "filePath": "pages/posts/index.tsx",
-        "dependencies": []
-      }
-    }
-  },
-  {
-    "name": "tags/[tag].tsx",
-    "graph": {
-      "module": {
-        "filePath": "pages/tags/[tag].tsx",
-        "dependencies": [
-          {
-            "filePath": "components/Posts.tsx",
-            "dependencies": []
-          }
-        ]
-      }
-    }
-  },
-  {
-    "name": "tags/index.tsx",
-    "graph": {
-      "module": {
-        "filePath": "pages/tags/index.tsx",
         "dependencies": [
           {
             "filePath": "utils/posts.ts",
@@ -167,22 +141,105 @@
                 "dependencies": [
                   {
                     "filePath": "utils/markdown/unifiedPlugins/hatenaLinkCard.ts",
-                    "dependencies": []
+                    "dependencies": [],
+                    "size": 1048
                   },
                   {
                     "filePath": "utils/markdown/unifiedPlugins/attachSizeToImage.ts",
-                    "dependencies": []
+                    "dependencies": [],
+                    "size": 1618
                   }
-                ]
+                ],
+                "size": 536
               }
-            ]
+            ],
+            "size": 2618
+          },
+          {
+            "filePath": "utils/members.ts",
+            "dependencies": [],
+            "size": 1840
+          },
+          {
+            "filePath": "components/MemberIcon.tsx",
+            "dependencies": [
+              {
+                "filePath": "utils/members.ts",
+                "dependencies": [],
+                "size": 1840
+              }
+            ],
+            "size": 411
           },
           {
             "filePath": "components/Tags.tsx",
-            "dependencies": []
+            "dependencies": [],
+            "size": 487
+          },
+          {
+            "filePath": "components/PostContent.tsx",
+            "dependencies": [],
+            "size": 186
+          },
+          {
+            "filePath": "components/TweetButton.tsx",
+            "dependencies": [],
+            "size": 669
+          },
+          {
+            "filePath": "components/PostContact.tsx",
+            "dependencies": [],
+            "size": 375
           }
-        ]
+        ],
+        "size": 4166
       }
-    }
+    },
+    "size": 11216
+  },
+  {
+    "name": "posts/index.tsx",
+    "graph": {
+      "module": {
+        "filePath": "pages/posts/index.tsx",
+        "dependencies": [],
+        "size": 629
+      }
+    },
+    "size": 629
+  },
+  {
+    "name": "tags/[tag].tsx",
+    "graph": {
+      "module": {
+        "filePath": "pages/tags/[tag].tsx",
+        "dependencies": [
+          {
+            "filePath": "components/Posts.tsx",
+            "dependencies": [],
+            "size": 475
+          }
+        ],
+        "size": 1210
+      }
+    },
+    "size": 1685
+  },
+  {
+    "name": "tags/index.tsx",
+    "graph": {
+      "module": {
+        "filePath": "pages/tags/index.tsx",
+        "dependencies": [
+          {
+            "filePath": "components/Tags.tsx",
+            "dependencies": [],
+            "size": 487
+          }
+        ],
+        "size": 529
+      }
+    },
+    "size": 1016
   }
 ]

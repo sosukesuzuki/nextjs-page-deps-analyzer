@@ -7,10 +7,13 @@
         "dependencies": [
           {
             "filePath": "components/Foo.tsx",
-            "dependencies": []
+            "dependencies": [],
+            "size": 57
           }
-        ]
+        ],
+        "size": 87
       }
-    }
+    },
+    "size": 144
   }
 ]

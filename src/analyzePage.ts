@@ -7,6 +7,7 @@ import { extensions } from "./utils";
 export type Page = {
   name: string;
   graph: ModuleGraph;
+  size: number;
 };
 
 export type ModuleGraph = {
@@ -16,6 +17,7 @@ export type ModuleGraph = {
 export type ModuleNode = {
   filePath: string;
   dependencies: ModuleNode[];
+  size: number;
 };
 
 const loadedModules: Map<string, ModuleNode | undefined> = new Map();
@@ -119,13 +121,21 @@ async function convertSpcifierToPath(
   throw err;
 }
 
+type SizeContainer = {
+  size: number;
+};
+
 async function analyzeModule(
   filePath: string,
-  baseDirPath: string
+  baseDirPath: string,
+  size: SizeContainer
 ): Promise<ModuleNode> {
+  const moduleSize = (await fs.stat(filePath)).size;
+  size.size += moduleSize;
   const moduleNode: ModuleNode = {
     filePath: path.relative(baseDirPath, filePath),
     dependencies: [],
+    size: moduleSize,
   };
   const fileContent = await readFile(filePath);
 
@@ -140,7 +150,7 @@ async function analyzeModule(
       );
       if (!loadedModules.has(newFilePath)) {
         loadedModules.set(newFilePath, undefined);
-        const newModule = await analyzeModule(newFilePath, baseDirPath);
+        const newModule = await analyzeModule(newFilePath, baseDirPath, size);
         loadedModules.set(newFilePath, newModule);
         moduleNode.dependencies.push(newModule);
       } else {
@@ -159,9 +169,11 @@ export async function analyzePage(
   pageFileName: string
 ): Promise<Page> {
   const baseDir = path.join(pagesDirPath, "..");
+  const size = { size: 0 };
   const moduleNode = await analyzeModule(
     path.join(pagesDirPath, pageFileName),
-    baseDir
+    baseDir,
+    size
   );
   const moduleGraph: ModuleGraph = {
     module: moduleNode,
@@ -169,5 +181,6 @@ export async function analyzePage(
   return {
     name: pageFileName,
     graph: moduleGraph,
+    size: size.size,
   };
 }
